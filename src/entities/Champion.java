@@ -25,6 +25,20 @@ public class Champion {
         }
     }
 
-    
-    
+    public String status(){
+        if(this.life==0){
+            return this.name + ":  0 de vida (morreu)";
+        }else {
+            return this.name + ": " + this.life + " de vida";
+        }
+    }
+
+    public int getLife(){
+        return this.life;
+    }
+
+    public int getAttack(){
+        return this.attack;
+    }
+                   
 }
