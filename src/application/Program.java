@@ -54,6 +54,6 @@ public class Program {
             System.out.println();
         }
 
-        System.out.println("FIM DO COMBATE");
+        System.out.println("FIM DO COMBATE!");
         }
     }
