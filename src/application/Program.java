@@ -32,8 +32,28 @@ public class Program {
         System.out.print("Armadura: ");
         int armor2 = sc.nextInt();
         sc.nextLine();
-        Champion champion2 = new Champion(name1, life1, attack1,armor1);
+        Champion champion2 = new Champion(name2, life2, attack2,armor2);
+
+        System.out.println();
+        System.out.print("Quantos turnos você deseja executar? ");
+        int turnos = sc.nextInt();
+        System.out.println();
+
+        for (int i = 1; i <= turnos; i++) {
+            if (champion1.getLife() == 0 || champion2.getLife() == 0) {
+                break;
+            }
 
 
+            champion1.takeDamage(champion2.getAttack());
+            champion2.takeDamage(champion1.getAttack());
+
+            System.out.println("Resultado do turno " + i + ":");
+            System.out.println(champion1.status());
+            System.out.println(champion2.status());
+            System.out.println();
+        }
+
+        System.out.println("FIM DO COMBATE");
         }
     }
