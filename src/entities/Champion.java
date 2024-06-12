@@ -14,5 +14,17 @@ public class Champion {
         this.armor = armor;
     }
 
+    public void takeDamage(int attack){
+        int damage = attack-this.armor;
+        if (damage < 1){
+            damage = 1;
+        }
+        this.life-=damage;
+        if(this.life<0){
+            this.life=0;
+        }
+    }
+
+    
     
 }
